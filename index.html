@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+ <meta charset="UTF-8">
+ <title>Solar Shop | خانه</title>
+ <link rel="stylesheet" href="style.css">
+ <style>
+/* مودال ثبت نام و سفارش */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal-content {
+  background: #1b1b1b;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #0dd370;
+}
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.modal-content button {
+  margin-top: 12px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2ecc71;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-content button:hover { background: #27ae60; }
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* کارت‌ها */
+.shop-item { 
+  background: #5a5a5a; 
+  padding: 15px; 
+  margin: 10px; 
+  border-radius: 10px; 
+  display: inline-block; 
+  vertical-align: top;
+  width: 250px;
+  text-align: center;
+  position: relative;
+}
+.shop-item img { width: 100%; border-radius: 8px; margin-bottom: 8px; }
+.shop-item button, .shop-item .btn { margin: 5px; padding: 10px 15px; border-radius: 6px; cursor: pointer; }
+</style>
+</head>
+
+<body>
+
+<header>Solar Shop</header>
+
+<nav>
+ <a href="index.html">خانه</a>
+ <a href="products.html">فروش اکانت ماینکرافت</a>
+ <a href="minecraft_server.html">سرور ماینکرافت</a>
+ <a href="contact.html">ارتباط با ما</a>
+</nav>
+
+<section class="hero">
+ <h1>به سولار شاپ خوش آمدید</h1>
+ <p>فروش اکانت پریمیوم ماینکرافت، ساخت تامنیل گیمینگ و خدمات دیجیتال</p>
+ <a class="btn" href="products.html">مشاهده محصولات</a>
+</section>
+
+<section class="shop-section">
+  <h2 class="shop-title">فروش اکانت ماینکرافت و تامنیل</h2>
+
+  <div class="shop-container">
+
+    <!-- کارت اکانت ماینکرافت -->
+    <div class="shop-item">
+      <img src="https://i.postimg.cc/HL04hbZ5/download.jpg" alt="premium-account">
+      <h3>اکانت پرمیوم اصلی</h3>
+      <p>ورژن لایف‌تایم + قابلیت اسم چینج</p>
+      <span class="price">800,000 تومان</span>
+      <a class="btn" href="product.html">جزئیات</a>
+      <button class="buy-btn" data-product="اکانت پرمیوم اصلی">خرید</button>
+    </div>
+
+    <div class="shop-item">
+      <img src="https://i.postimg.cc/HL04hbZ5/download.jpg" alt="hypixel">
+      <h3>اکانت هایپیکسل</h3>
+      <p>بدون بن + رنک معمولی</p>
+      <span class="price">800,000 تومان</span>
+      <a class="btn" href="product.html">جزئیات</a>
+      <button class="buy-btn" data-product="اکانت هایپیکسل">خرید</button>
+    </div>
+
+    <!-- کارت تامنیل گیمینگ -->
+    <div class="shop-item">
+      <img src="https://i.postimg.cc/YqNx8hRR/210980-temp.jpg" alt="thumbnail">
+      <h3>تامنیل گیمینگ حرفه‌ای</h3>
+      <p>کیفیت بالا – استایل حرفه‌ای</p>
+      <span class="price">200,000 تومان</span>
+      <button class="buy-btn" data-product="تامنیل گیمینگ">خرید تامنیل</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- اسلایدر -->
+<div class="slider">
+    <div class="slides">
+        <img src="https://i.postimg.cc/nr4qdP4d/210937-temp.jpg" class="slide active">
+        <img src="https://i.postimg.cc/YqNx8hRR/210980-temp.jpg" class="slide">
+        <img src="https://i.postimg.cc/vBZFZ5Nm/IMG-20250214-124337-938.jpg" class="slide">
+        <img src="https://i.postimg.cc/cJ9ZYDYn/IMG-20250215-193744-363.jpg" class="slide">
+        <img src="https://i.postimg.cc/bwxK06XG/IMG-20250124-010811-742.jpg" class="slide">
+        <img src="https://i.postimg.cc/TPBmT6QS/IMG-20250403-194453-769-(1).jpg" class="slide">
+    </div>
+
+    <button class="prev">❯</button>
+    <button class="next">❮</button>
+</div>
+
+<h3 style="text-align:center;margin-top:20px;">تامنیل گیمینگ</h3>
+<p style="text-align:center;margin-bottom:20px;">کیفیت بالا – استایل حرفه‌ای</p>
+
+<div class="footer">Solar Shop © 2025</div>
+
+<section class="social-section">
+  <h2 class="social-title">شبکه‌های اجتماعی ما</h2>
+  <div class="social-container">
+    <img src="https://i.postimg.cc/V6PyX362/download-(1).jpg" class="@Solk_Shop" alt="rubika">
+    <img src="https://i.postimg.cc/qv7pRVh8/download.png" class="social-icon" alt="instagram">
+    <img src="https://i.postimg.cc/qv7pRVh8/download.png" class="social-icon" alt="discord">
+  </div>
+</section>
+
+<!-- مودال ثبت نام و سفارش -->
+<div id="order-modal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h2 id="modal-title">ثبت نام</h2>
+
+    <div id="register-section">
+      <input type="text" id="reg-name" placeholder="نام و نام خانوادگی">
+      <input type="text" id="reg-phone" placeholder="شماره موبایل">
+      <button id="reg-submit">ثبت نام</button>
+    </div>
+
+    <div id="order-section" style="display:none;">
+      <p id="order-desc">توضیحات محصول...</p>
+      <button id="order-submit">ثبت سفارش</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// اسلایدر
+const nextButtons = document.querySelectorAll(".next");
+const prevButtons = document.querySelectorAll(".prev");
+
+function changeSlide(slider, direction = "next") {
+    let slides = slider.querySelectorAll(".slide");
+    let index = [...slides].findIndex(s => s.classList.contains("active"));
+    slides[index].classList.remove("active");
+    if (direction === "next") slides[(index + 1) % slides.length].classList.add("active");
+    else slides[(index - 1 + slides.length) % slides.length].classList.add("active");
+}
+nextButtons.forEach(btn => btn.addEventListener("click", function() {
+    let slider = btn.parentElement;
+    changeSlide(slider, "next");
+}));
+prevButtons.forEach(btn => btn.addEventListener("click", function() {
+    let slider = btn.parentElement;
+    changeSlide(slider, "prev");
+}));
+setInterval(()=>{document.querySelectorAll(".slider").forEach(slider=>changeSlide(slider,"next"));},4000);
+
+// مودال ثبت نام و سفارش
+let isRegistered = false;
+let selectedProduct = "";
+
+const modal = document.getElementById("order-modal");
+const registerSection = document.getElementById("register-section");
+const orderSection = document.getElementById("order-section");
+const modalTitle = document.getElementById("modal-title");
+const orderDesc = document.getElementById("order-desc");
+
+document.querySelectorAll(".buy-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    selectedProduct = btn.dataset.product;
+    modal.style.display = "flex";
+
+    if(isRegistered){
+      registerSection.style.display = "none";
+      orderSection.style.display = "block";
+      modalTitle.innerText = "سفارش محصول";
+      orderDesc.innerText = "شما در حال سفارش محصول " + selectedProduct + " هستید.";
+    } else {
+      registerSection.style.display = "block";
+      orderSection.style.display = "none";
+      modalTitle.innerText = "ثبت نام";
+    }
+  });
+});
+
+document.querySelector(".modal-close").addEventListener("click", ()=>{ modal.style.display = "none"; });
+
+document.getElementById("reg-submit").addEventListener("click", ()=>{
+  const name = document.getElementById("reg-name").value.trim();
+  const phone = document.getElementById("reg-phone").value.trim();
+  if(name && phone){
+    isRegistered = true;
+    alert("ثبت نام با موفقیت انجام شد!");
+    registerSection.style.display = "none";
+    orderSection.style.display = "block";
+    modalTitle.innerText = "سفارش محصول";
+    orderDesc.innerText = "شما در حال سفارش محصول " + selectedProduct + " هستید.";
+  } else { alert("لطفا تمام فیلدها را پر کنید!"); }
+});
+
+document.getElementById("order-submit").addEventListener("click", ()=>{
+  alert("سفارش شما برای محصول " + selectedProduct + " ثبت شد!\nپس از تایید، برای شما پیامک ارسال خواهد شد.");
+  modal.style.display = "none";
+});
+
+document.getElementById("order-submit").addEventListener("click", ()=>{
+  const phone = document.getElementById("reg-phone").value.trim();
+  
+  fetch('send_sms.php', {  // آدرس فایل PHP روی سرور
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `phone=${phone}&product=${selectedProduct}`
+  })
+  .then(response => response.text())
+  .then(data => {
+    alert("سفارش شما ثبت شد و پیامک ارسال شد!");
+    modal.style.display = "none";
+  })
+  .catch(err => { alert("ارسال پیامک با مشکل مواجه شد!"); });
+});
+
+</script>
+
+
+</body>
+</html>

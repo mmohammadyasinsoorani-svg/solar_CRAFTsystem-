@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+ <meta charset="UTF-8">
+ <title>Solar Shop | محصولات</title>
+ <link rel="stylesheet" href="style.css">
+
+<style>
+/* استایل کلی */
+body {
+  margin: 0;
+  font-family: Vazirmatn, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  direction: rtl;
+}
+
+header {
+  background: linear-gradient(90deg,#1a8f2f,#3cb043,#79c15e);
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav {
+  background: #111;
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  color: #9cff9c;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav a:hover { color:#5bff75; }
+
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* کارت محصول */
+.card {
+  width: 300px;
+  background: #5a5a5a;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #0dd370;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+/* هاله نور */
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(255,255,255,0.25), rgba(255,255,255,0));
+  transition: bottom 0.45s ease;
+   pointer-events: none;
+}
+.card:hover::after { bottom: 0; }
+
+/* اسلایدر داخلی کارت‌ها */
+.card-slider {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-slides {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  transition: transform .6s ease;
+}
+
+.card-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #2ecc71;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover { background:#27ae60; }
+
+/* دکمه‌های اسلایدر */
+.card-prev, .card-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,.4);
+  color: #fff;
+  padding: 4px 9px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card-prev:hover, .card-next:hover {
+  background: rgba(0,0,0,.65);
+}
+
+.card-prev { right: 5px; }
+.card-next { left: 5px; }
+
+/* فوتر */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background: #111;
+  color: #aaa;
+}
+</style>
+</head>
+
+<body>
+<header>محصولات Solar Shop</header>
+
+<nav>
+ <a href="index.html">خانه</a>
+ <a href="products.html">محصولات</a>
+ <a href="minecraft_server.html">سرور ماینکرافت</a>
+ <a href="contact.html">ارتباط با ما</a>
+</nav>
+
+<div class="container">
+
+  <!-- کارت ۱ -->
+  <div class="card">
+    <div class="card-slider">
+      <div class="card-slides">
+        <img src="https://i.postimg.cc/xjMmG7jX/download.jpg" class="card-slide">
+        <img src="https://i.postimg.cc/KY1k1psY/images-(3).jpg" class="card-slide">
+      </div>
+      <button class="card-prev">❮</button>
+      <button class="card-next">❯</button>
+    </div>
+
+    <h3>اکانت پریمیوم ماینکرافت</h3>
+    <a class="btn" href="product.html">جزئیات</a>
+  </div>
+
+  <!-- کارت ۲ -->
+  <div class="card">
+    <div class="card-slider">
+      <div class="card-slides">
+        <img src="https://i.postimg.cc/fTYvLySP/210980-temp.jpg" class="card-slide">
+        <img src="https://i.postimg.cc/kgfK6bJz/IMG-20250403-194453-769-(1).jpg" class="card-slide">
+        <img src="https://i.postimg.cc/nVD4Rr2J/210937-temp.jpg" class="card-slide">
+      </div>
+      <button class="card-prev">❮</button>
+      <button class="card-next">❯</button>
+    </div>
+
+    <h3>تامنیل گیمینگ حرفه‌ای</h3>
+    <a class="btn" href="product.html">جزئیات</a>
+  </div>
+
+</div>
+
+
+<div class="footer">Solar Shop © 2025</div>
+
+<script>
+/* اسلایدر داخلی هر کارت */
+document.querySelectorAll(".card").forEach(card => {
+  
+  let slides = card.querySelector(".card-slides");
+  let imgs = card.querySelectorAll(".card-slide");
+  let index = 0;
+
+  function update() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  card.querySelector(".card-next").addEventListener("click", () => {
+    index = (index + 1) % imgs.length;
+    update();
+  });
+
+  card.querySelector(".card-prev").addEventListener("click", () => {
+    index = (index - 1 + imgs.length) % imgs.length;
+    update();
+  });
+
+  // اسلاید خودکار
+  setInterval(() => {
+    index = (index + 1) % imgs.length;
+    update();
+  }, 3500);
+
+});
+</script>
+
+</body>
+</html>

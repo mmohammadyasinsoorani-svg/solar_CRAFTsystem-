@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Vazirmatn", sans-serif;
+  direction: rtl;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+header {
+  background: linear-gradient(90deg,#1a8f2f,#3cb043,#79c15e);
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+nav {
+  background: #111;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav a {
+  color: #9cff9c;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover { color: #5bff75; }
+
+.hero {
+  background: url('https://i.postimg.cc/SxVdV6J6/solar-system-model.jpg') center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: rgb(56, 165, 216);
+  box-shadow: inset 0 0 80px rgba(0,0,0,0.7);
+}
+
+/* افکت تایپ + تکان */
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #9ec9ff;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+
+  animation: typing 3s steps(30) forwards,
+             swing 3s ease-out forwards;
+  transform-origin: top center;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes swing {
+  0%   { transform: rotate(25deg); }
+  20%  { transform: rotate(-20deg); }
+  40%  { transform: rotate(12deg); }
+  60%  { transform: rotate(-8deg); }
+  80%  { transform: rotate(4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* دکمه */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: #2ecc71;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover { background: #27ae60; }
+
+/* اسلایدر */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 30px auto 10px auto;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 22px;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* بخش تامنیل */
+.thumb-container {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  color: #999;
+}
+.shop-section {
+  padding: 40px 0;
+  text-align: center;
+  color: white;
+}
+
+.shop-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.shop-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.shop-item {
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.shop-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.shop-item:hover {
+  transform: scale(1.03);
+}
+
+.shop-item h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.price {
+  display: block;
+  margin: 8px 0;
+  font-size: 18px;
+  color: #00ff8c;
+  font-weight: bold;
+}
+
+.shop-item button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #00c896;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.shop-item button:hover {
+  background: #00a578;
+}
+.social-section {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+}
+
+.social-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #00faff);
+}
+/* فرم ثبت نام و سفارش */
+.modal {
+  display: none; /* مخفی به طور پیش فرض */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #1b1b1b;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #0dd370;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  margin-top: 12px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2ecc71;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #27ae60;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+}
